@@ -12,8 +12,6 @@ import Page from './components/page.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faCaretDown} from "@fortawesome/free-solid-svg-icons";
 
-import './app.css';
-
 const styles = theme => ({
 
 root:{
@@ -35,7 +33,7 @@ root:{
     fontFamily: "Helvetica",
     fontStyle: "italic",
     padding: "15px 60px",
-    background: "#523468",
+    background: "#523468 !important",
     alignItems: "center",
     display: "flex",
     boxShadow: "0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)",
@@ -119,19 +117,18 @@ textColor: {
 class App extends Component {
   render() {
     
-    const { classes, fullScreen } = this.props;
+    const { classes } = this.props;
     return (
       <div className={classes.root}>
-       
-          <div className={classes.appBar}>
-            <Logo/>
-            <Search/>
-            <Bag/>
-          </div>
-
-          <div 
-           className={`appBer ${classes.appMenu}`}
-           >
+            
+                <div className={classes.appBar}>
+                  <Logo/>
+                  <Search/>
+                  <Bag/>
+                </div>
+            
+<div className={classes.appBer}>
+          <div className={classes.appMenu}>
             <Link style={{ textDecoration: 'none' }} to="/"> 
               <span className={classes.tipografia}>
               Potions <FontAwesomeIcon className ='font-awesome' icon={faCaretDown} />
@@ -175,13 +172,14 @@ class App extends Component {
               </span> 
           </div>
         </div>
+        </div>
 
         <div>
           <p className={classes.potions}>Potions</p>
           <Page/>
           <Rodape/>
         </div>
-
+     
       </div> 
     );
   }

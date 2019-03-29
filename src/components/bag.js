@@ -3,7 +3,6 @@ import { withStyles } from '@material-ui/core/styles';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag} from "@fortawesome/free-solid-svg-icons";
 
-
 const styles = theme => ({
 
     root:{
@@ -52,6 +51,8 @@ class Bag extends Component {
   render() {
     const { classes } = this.props;
     return (
+
+    
         <div className={classes.root}>
             <div className={classes.textFree}>
                 <p>Free shipping</p>
@@ -64,6 +65,7 @@ class Bag extends Component {
                 <p>BAG: <span className={classes.number}>1</span></p> 
             </div>
         </div>
+       
     );
   }
 }

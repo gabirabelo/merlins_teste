@@ -165,7 +165,7 @@ class Page extends Component {
           </div>
           <div className={classes.modal}>
           
-             <div><img src={`./img/${this.state.potion.image}`} className={classes.imgApi}/> </div>  
+             <div><img src={`../img/${this.state.potion.image}`} className={classes.imgApi}/> </div>  
              <div><h2>{this.state.potion.name}</h2>
               <h4>Use/Effect</h4>
               <p> {this.state.potion.effect}</p>
