@@ -64,8 +64,8 @@ root:{
     
       '&:hover': {
         background:"#422a53",
-        borderRadius: "10px",      }
-    
+        borderRadius: "10px",      
+      }
   },
 
   sing:{
