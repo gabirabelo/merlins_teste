@@ -1,0 +1,6 @@
+@media only screen and (max-width: 650px) and (min-width: 481px) {
+    .appBer{
+        background: red;
+        width: 10;
+    }
+}
