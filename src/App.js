@@ -47,7 +47,11 @@ root:{
     fontSize: "15px",
     color: "#fff",
     fontFamily:"Arial",
-    padding: "30px",
+    padding: "18px",
+    '&:hover': {
+      background:"#422a53",
+      borderRadius: "10px",      
+    }
   },
 
   tipografia2:{
@@ -57,18 +61,21 @@ root:{
     color: "#fff",
     fontFamily:"Arial",
     padding: "18px",
-    background:"#422a53",
-    borderRadius: "10px"
+    
+      '&:hover': {
+        background:"#422a53",
+        borderRadius: "10px",      }
+    
   },
 
   sing:{
     justifyContent: "center",
     alignItems: "center",
     fontSize: "15px",
-    color: "#fff",
-    fontFamily:"Arial",
+    color: "#8a8787",
     padding: "18px",
-    marginLeft: "200px"
+    marginLeft: "200px",
+    textDecoration: "none",
   },
 
   border:{
@@ -85,7 +92,7 @@ page:{
   display:"flex",
   justifyContent: "center",
   alignItems: "center",
-  flexDirection: "column"
+  flexDirection: "column",
     
 },
 
@@ -102,6 +109,10 @@ row:{
   flexDirection: "row",
   width: 5,
 },
+
+textColor: {
+  color: "white"
+}
 
 });
 
@@ -127,31 +138,31 @@ class App extends Component {
               </span> 
             </Link>
 
-            <Link style={{ textDecoration: 'none' }} to="/logo"> 
+            <Link style={{ textDecoration: 'none' }} to="/"> 
               <span className={classes.tipografia}>
               Ingredients <FontAwesomeIcon className ='font-awesome' icon={faCaretDown} />
               </span>
             </Link>
 
-            <Link style={{ textDecoration: 'none' }} to="/cards"> 
+            <Link style={{ textDecoration: 'none' }} to="/"> 
               <span className={classes.tipografia}>
               Books <FontAwesomeIcon className ='font-awesome' icon={faCaretDown} />
               </span> 
             </Link>
 
-            <Link style={{ textDecoration: 'none' }} to="/cards"> 
+            <Link style={{ textDecoration: 'none' }} to="/"> 
               <span className={classes.tipografia}>
               Suplies <FontAwesomeIcon className ='font-awesome' icon={faCaretDown} />
               </span> 
             </Link>
 
-            <Link style={{ textDecoration: 'none' }} to="/cards"> 
+            <Link style={{ textDecoration: 'none' }} to="/"> 
               <span className={classes.tipografia}>
               Charms <FontAwesomeIcon className ='font-awesome' icon={faCaretDown} />
               </span> 
             </Link>
 
-            <Link style={{ textDecoration: 'none' }} to="/cards"> 
+            <Link style={{ textDecoration: 'none' }} to="/"> 
               <span className={classes.tipografia2}>
               Clearance!
               </span> 
@@ -159,7 +170,8 @@ class App extends Component {
 
           <div className={classes.page}>
               <span className={classes.sing}>
-              Sing in or Sing Up
+              <Link className={classes.textColor} style={{ textDecoration: 'none' }} to="/"> Sing in</Link> or 
+              <Link className={classes.textColor} style={{ textDecoration: 'none' }} to="/"> Sing Up</Link>
               </span> 
           </div>
         </div>
